@@ -1,0 +1,30 @@
+*{
+    color:  	#f3e600;
+}
+.cta-container{
+    background-image: url(wallpaper-container.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cta-text{
+    font-size: 28px;
+    font-weight: bold;
+}
+.cta-button{
+    background-color: #c5003c;
+    color: #55ead4;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
