@@ -1,0 +1,35 @@
+.cuadrado-amarillo {
+    /* Estado inicial */
+    width: 300px;
+    height: 300px;
+    background-color: #FFD700; /* Amarillo vibrante */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Transición */
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease, border-radius 0.3s ease;
+}
+
+.cuadrado-amarillo:hover {
+    /* Estado :hover */
+    background-color: aqua;
+    transform: translateX(10px);
+    border-radius: 50%;
+}
+
+.cuadrado-amarillo::after{
+    content: "→";
+    font-weight: bold;
+    margin-left: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.cuadrado-amarillo:hover::after{
+    transform: translateX(150px);
+    transform: translateY(150px);
+}
