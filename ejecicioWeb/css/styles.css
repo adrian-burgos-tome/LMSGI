@@ -1,0 +1,233 @@
+
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    color: #343a40; 
+    line-height: 1.6;
+    /* line-height cambia el tamaño de la línea */
+}
+
+/*Header*/
+.header {
+    background-color: #f8f9fa; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.6em; 
+    text-decoration: none;
+}
+
+#menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Lista de navegación */
+.header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Enlaces del menú */
+.header ul li a {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 1.2em; 
+    padding: 25px 10px;
+    display: block;
+    border-bottom: 3px solid transparent; 
+    transition: all 0.3s ease;
+}
+
+/* Colores */
+/* Home */
+/* Duda buscada en internet: nth-child se usa para seleccionar elementos en función de su posición */
+.header ul li:nth-child(1) a {
+    border-bottom-color: #007bff;
+}
+/* About */
+.header ul li:nth-child(2) a {
+    border-bottom-color: #32cd32;
+}
+/* Services */
+.header ul li:nth-child(3) a {
+    border-bottom-color: #8a2be2;
+}
+/* Contact */
+.header ul li:nth-child(4) a {
+    border-bottom-color: #ffd747; 
+}
+
+
+.header ul li a:hover {
+    border-bottom-color: #007bff !important; 
+    font-weight: bold; 
+}
+
+/* Sección CTA */
+.cta-container {
+    background-color: #e9ecef; 
+    padding: 110px 20px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-container h1 {
+    font-size: 2.2em; 
+    margin-bottom: 20px;
+}
+
+.cta-container p {
+    max-width: 550px; 
+    font-weight: bold; 
+    font-size: 1.2em; 
+    margin: 0 auto;
+}
+
+/* Sección Services */
+.services-container {
+    background-color: #f1f3f5; 
+    padding: 34px 5%; 
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+
+.services-container > div {
+    width: 30%; 
+    margin-bottom: 20px;
+}
+
+/* Duda buscada en internet: :first-child se usa para seleccionar el primer hijo de un elemento padre */
+.services-container > div > div:first-child {
+    font-size: 2em; 
+    margin-bottom: 10px;
+}
+
+/* Sección Contact */
+.contact-container {
+    background-color: #f8f9fa; 
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.contact-form {
+    width: 100%;
+    max-width: 500px; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Inputs y Textarea */
+.contact-form input,
+.contact-form textarea {
+    background-color: #f1f3f5;
+    border: none;
+    border-bottom: 2px solid #ccc; 
+    padding: 10px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+
+/* Input Name */ 
+/* Con [] se selecciona el atributo name del input */
+.contact-form input[name="name"] {
+    border-bottom: 2px solid #32cd32; 
+}
+
+/* Input Email */
+.contact-form input[name="email"] {
+    border-bottom: 2px solid #8a2be2; 
+}
+
+/* Textarea Message */
+.contact-form textarea {
+    border-bottom: 2px solid #ffd747;
+    resize: vertical;
+    /* resize vertical permite cambiar el tamaño solo verticalmente */
+}
+
+/* Hover general inputs y textarea */
+.contact-form input:hover,
+.contact-form textarea:hover {
+    border-bottom: 2px solid #007bff; 
+}
+
+/* Botón de envío */
+.contact-form button {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #343a40; 
+}
+
+/* 6. Footer*/
+footer {
+    background-color: #f1f3f5; 
+    padding: 20px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+footer h3, 
+footer small {
+    font-weight: bold; 
+    margin: 0;
+}
+
+footer a {
+    font-size: 2em; 
+    text-decoration: none; 
+    color: #343a40;
+}
+
