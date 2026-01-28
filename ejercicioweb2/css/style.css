@@ -1,0 +1,167 @@
+
+.montserrat-light {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+:root {
+  --primary-blue: #074167;
+  --dark-blue: #143548;
+  --background-light: #ffebd9;
+
+  --hover-light: #CCB299;
+  --font-family: 'Montserrat', sans-serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: 300; 
+}
+header {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.menu li {
+  list-style: none;
+  padding-right: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    transition: transform 0.25s ease;
+}
+
+.logo:hover img {
+    transform: rotate(360deg);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search input {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--background-light);
+    outline: none;
+    transition: transform 0.25s ease;
+}
+
+.search input:hover,
+.search input:focus {
+    transform: scale(1.1);
+}
+
+.search button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.search button:not(.hamburger):hover {
+    transform: scale(1.3);
+    color: var(--hover-light);
+}
+
+.hamburger {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-container {
+    background-image: url('gato_fondo.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: sepia(30%);
+}
+
+
+footer .footer-copy {
+  background-color: var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1.5%;
+  color: var(--background-light);
+}
+
+.footer-menu {
+  background-color: var(--dark-blue);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5%;
+  background-size: cover;
+}
+
+.footer-menu div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-menu div h3 {
+  margin-bottom: 10px;
+  color: var(--background-light);
+}
+
+.footer-menu div a {
+  text-decoration: none;
+  color: var(--background-light);
+}
+
+.menu a:hover,
+.footer-menu a:hover {
+  color: var(--hover-light);
+}
