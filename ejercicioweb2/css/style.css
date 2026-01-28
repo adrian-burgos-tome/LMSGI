@@ -116,12 +116,20 @@ header {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    background-position: center center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     filter: sepia(30%);
+}
+
+.cta-container h1 {
+    font-weight: 300;
+    font-size: 5rem;
+    color: #333;
+    text-shadow: 8px 4px 6px var(--hover-light);
 }
 
 
@@ -164,4 +172,11 @@ footer .footer-copy {
 .menu a:hover,
 .footer-menu a:hover {
   color: var(--hover-light);
+}
+
+a,
+button,
+input[type="submit"],
+.logo {
+    cursor: pointer;
 }
