@@ -81,7 +81,9 @@ body {
     border-bottom-color: #007bff !important; 
     font-weight: bold; 
 }
-
+nav button{
+  display none
+}
 /* Sección CTA */
 .cta-container {
     background-color: #e9ecef; 
@@ -231,3 +233,21 @@ footer a {
     color: #343a40;
 }
 
+
+@media (max-width: 800px){
+  .services-container{
+    flex-direction: column;
+  }
+
+  .services-container div{
+    width: 100%;
+  }
+  nav ul{
+    display:none;
+  }
+  nav button{
+    display:block;
+  }
+
+
+}
