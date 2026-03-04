@@ -1,0 +1,25 @@
+body{
+    background-color: lightcoral;
+    color: yellow;
+}
+
+@media (min-width: 600px) {
+    body {
+        background-color: lightblue;
+        color: black;
+    }
+}
+
+@media (min-width: 900px) {
+    body {
+        background-color: lightgreen;
+        color: darkblue;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: lightgoldenrodyellow;
+        color: darkred;
+    }
+}
