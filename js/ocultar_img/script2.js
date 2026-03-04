@@ -4,7 +4,6 @@ let diapositivaActual=0;
 
 mostrarCarrusel();
 
-
 function mostrarCarrusel(){
     for (let i = 0; i < imagenes.length; i++) {
                 imagenes[i].style.display = 'none';
