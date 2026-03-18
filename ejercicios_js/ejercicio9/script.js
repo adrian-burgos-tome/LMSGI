@@ -1,44 +1,28 @@
-const botones = document.querySelectorAll('.borrar');
-const listatareas = document.getElementById('lista');
-const entrada = document.getElementById('entrada');
-const button = document.getElementById('agregar');
+let input = document.getElementById('input')
+let lista = document.getElementById('lista')
+let boton = document.getElementById('boton')
 
-button.addEventListener('click', agregar);
-
-
-
+boton.addEventListener('click', agregar)
 
 function agregar() {
-    if (entrada.value.trim() === "") return; 
-
-    const litarea = document.createElement("li");
-    const node = document.createTextNode(entrada.value + " ");
-    litarea.appendChild(node);
-
-    // Botón Borrar
-    const nuevoBoton = document.createElement("button");
-    nuevoBoton.innerText = "X";
-    nuevoBoton.classList.add("borrar");
-    nuevoBoton.addEventListener('click', borrarElemento);
-
-    // Botón Marcar 
-    const nuevoBoton2 = document.createElement("button");
-    nuevoBoton2.innerText = "Marcar"; 
-    nuevoBoton2.classList.add("Marcar");
-    nuevoBoton2.addEventListener('click', marcarElemento);
+    let tarea = document.createElement('li')
+    tarea.textContent = input.value + ' '
     
-    litarea.appendChild(nuevoBoton);
-    litarea.appendChild(nuevoBoton2);
-    listatareas.appendChild(litarea);
+    let buttonBorrar = document.createElement('button')
+    // Le ponemos un texto al boton
+    buttonBorrar.textContent = 'x'
+    buttonBorrar.addEventListener('click', borrar)
 
-    entrada.value = ""; 
+    // Creamos un input de tipo checkbox
+    let hecho = document.createElement('input')
+    hecho.type = 'checkbox'
+
+    tarea.appendChild(hecho)
+    tarea.appendChild(buttonBorrar)
+    lista.appendChild(tarea)
+
 }
 
-function marcarElemento() {
-    // 'this' es el botón al que se le hizo clic
-    // 'parentElement' es el <li> que contiene el botón
-    const li = this.parentElement;
-    
-    
-    li.classList.toggle("completada");
+function borrar() {
+    this.parentElement.remove()
 }
