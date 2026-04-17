@@ -21,8 +21,16 @@ function agregar() {
     tarea.appendChild(buttonBorrar)
     lista.appendChild(tarea)
 
+    hecho.addEventListener('click', cambiarClase)
+
 }
 
 function borrar() {
     this.parentElement.remove()
+}
+
+function cambiarClase(){
+    
+    this.parentElement.classList.toggle('miclase')
+    
 }
